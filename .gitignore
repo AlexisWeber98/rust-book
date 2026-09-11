@@ -1,0 +1,17 @@
+# Cargo build output
+target/
+**/target/
+
+# Binaries compiled by hand with rustc
+mainfile/main
+hello_cargo/src/main
+
+# Tooling / local agent cache
+.atl/
+
+# Editor and OS noise
+*.swp
+.DS_Store
+
+# Editor workspace settings
+.vscode/
