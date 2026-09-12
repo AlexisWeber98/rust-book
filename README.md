@@ -1,31 +1,51 @@
 # The Rust Programming Language — Exercises
 
-My working notes and code while reading [The Rust Programming Language](https://doc.rust-lang.org/book/) ("the book").
+My working code while reading [The Rust Programming Language](https://doc.rust-lang.org/book/) ("the book").
 
-Each directory is a standalone exercise or project from the chapters.
+## Layout
+
+One directory per chapter, named `chNN-chapter-topic/`, following the naming used
+by the [official book repository](https://github.com/rust-lang/book). Inside each
+chapter, one subdirectory per exercise or project.
+
+```
+chNN-chapter-topic/
+└── exercise_name/
+    ├── Cargo.toml
+    └── src/main.rs
+```
 
 ## Contents
 
-| Path | Chapter | What it covers |
+| Chapter | Exercise | What it covers |
 | --- | --- | --- |
-| `mainfile/` | 1.2 | `rustc` compiled "Hello, world!" without Cargo |
-| `hello_cargo/` | 1.3 | First Cargo project: `cargo new`, `build`, `run`, `check` |
-| `projects/guessing_game/` | 2 | Guessing game: `std::io`, the `rand` crate, `match`, `loop`, shadowing |
+| `ch01-getting-started/` | `hello_world/` | Compiling with `rustc`, no Cargo |
+| | `hello_cargo/` | First Cargo project: `new`, `build`, `run`, `check` |
+| `ch02-guessing-game/` | `guessing_game/` | `std::io`, the `rand` crate, `match`, `loop`, shadowing |
 
 ## Running
 
 Cargo projects:
 
 ```bash
-cd hello_cargo
+cd ch01-getting-started/hello_cargo
 cargo run
 ```
 
 Plain `rustc` files:
 
 ```bash
-cd mainfile
+cd ch01-getting-started/hello_world
 rustc main.rs && ./main
+```
+
+## Adding a new exercise
+
+Create it with the VCS disabled — otherwise Cargo initializes a nested git
+repository inside this one and breaks `git add`:
+
+```bash
+cargo new --vcs none ch03-common-concepts/variables
 ```
 
 ## Toolchain
