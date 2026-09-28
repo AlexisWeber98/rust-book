@@ -87,4 +87,67 @@ fn main() {
     println!("modulo: {remainder}");
 
     // ------------------------ BOOLEANO ----------------------------- //
+
+    let _t = true;
+    let _f: bool = false;
+
+    // ------------- Caracter ------------------- //
+
+    let _character: char = 'a';
+    let _character_two = 'Z';
+
+    // --------------- COMPUESTOS ------------------//
+
+    // tuplas //
+
+    /*
+     * las tuplas son inmutablesm y los valores pueden tener tipos distintos
+     */
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    let (x, y, z) = tup;
+
+    println!("The value of Y is: {y}");
+
+    let five_hundred = tup.0;
+
+    println!("the value of X is: {five_hundred}");
+
+    let one = tup.2;
+
+    println!("The value of Z is: {one}");
+
+    // arreglos
+    /*
+     * los arreglos sotn inmutables y sus valores solo pueden tener el mismo tipo
+     */
+
+    let _first_array = [1, 2, 3, 4];
+
+    let _months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+
+    // print!("Montsh: \n {months}");
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    let three = [3; 5]; // contiene 5 elemntos cuyo valor sera 3
+    let first_element = a[0];
+
+    let second_element = three[1];
+
+    println!("First element of a: {first_element}");
+
+    println!("Second element of trhee: {second_element}");
 }
